@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorrigéPlus - Services de Corrigés et Rédaction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2ecc71;
+            --accent: #9b59b6;
+            --dark: #2c3e50;
+            --light: #f9f9f9;
+            --warning: #f39c12;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%233498db" opacity="0.05" width="100" height="100"/></svg>');
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            background-color: #27ae60;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .services {
+            padding: 4rem 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-right: 1rem;
+            color: var(--primary);
+        }
+        
+        .service-description {
+            margin-bottom: 1.5rem;
+        }
+        
+        .levels {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .level-tag {
+            background-color: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .features {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .testimonial-section {
+            padding: 4rem 0;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .testimonial {
+            max-width: 800px;
+            margin: 0 auto;
+            font-style: italic;
+            font-size: 1.2rem;
+            padding: 2rem;
+            background-color: var(--light);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-author {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .hashtags {
+            margin-top: 1rem;
+        }
+        
+        .hashtag {
+            display: inline-block;
+            margin: 0 5px;
+            color: var(--secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">CorrigéPlus</div>
+            <div class="tagline">L'excellence académique à portée de main</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Corrigés types complets et bien expliqués</h1>
+            <p>Pour tous les niveaux : collège, lycée, licence et Master. Des solutions détaillées pour vous aider à réussir vos examens et améliorer votre compréhension.</p>
+            <a href="https://jeanskodoc.github.io/CORRIG-PLUS/" class="cta-button">Accéder aux corrigés</a>
+        </div>
+    </section>
+    
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>Corrigés types complets</h3>
+                    </div>
+                    <div class="service-description">
+                        <p>Des corrigés détaillés et bien expliqués pour vos épreuves et examens. Chaque solution est rédigée par des experts pédagogiques pour garantir la qualité et la précision.</p>
+                    </div>
+                    <div class="levels">
+                        <span class="level-tag">Collège</span>
+                        <span class="level-tag">Lycée</span>
+                        <span class="level-tag">Licence</span>
+                        <span class="level-tag">Master</span>
+                    </div>
+                    <a href="https://jeanskodoc.github.io/CORRIG-PLUS/" class="cta-button">Explorer les corrigés</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                        <h3>Rédaction de documents professionnels</h3>
+                    </div>
+                    <div class="service-description">
+                        <p>Service complet de rédaction, mise en forme et correction de tous types de documents académiques et professionnels avec LaTeX pour un résultat impeccable.</p>
+                    </div>
+                    <div class="levels">
+                        <span class="level-tag">Exercices</span>
+                        <span class="level-tag">Épreuves</span>
+                        <span class="level-tag">Mémoires</span>
+                        <span class="level-tag">Articles</span>
+                    </div>
+                    <a href="https://jeanskodoc.github.io/TRAITEMENT-DE-DOCUMENTS-EN-LATEX/" class="cta-button">Découvrir le service</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Pourquoi nous choisir ?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3>Solutions vérifiées</h3>
+                    <p>Tous nos corrigés sont vérifiés par des experts pour garantir leur exactitude.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Pédagogie adaptée</h3>
+                    <p>Des explications claires et détaillées pour une meilleure compréhension.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Gain de temps</h3>
+                    <p>Gagnez un temps précieux avec nos solutions prêtes à l'emploi.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-star"></i></div>
+                    <h3>Qualité professionnelle</h3>
+                    <p>Des documents soignés et professionnels avec une mise en page impeccable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="section-title">Témoignages</h2>
+            <div class="testimonial">
+                <p>"Grâce aux corrigés détaillés de CorrigéPlus, j'ai enfin compris des concepts qui me paraissaient obscurs. Mes résultats se sont considérablement améliorés !"</p>
+                <div class="testimonial-author">- Marie, étudiante en Licence de Mathématiques</div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 CorrigéPlus. Tous droits réservés.</p>
+            <div class="hashtags">
+                <span class="hashtag">#Corrigés</span>
+                <span class="hashtag">#Éducation</span>
+                <span class="hashtag">#Réussite</span>
+                <span class="hashtag">#LaTeX</span>
+                <span class="hashtag">#Mémoire</span>
+                <span class="hashtag">#Examen</span>
+                <span class="hashtag">#Collège</span>
+                <span class="hashtag">#Lycée</span>
+                <span class="hashtag">#Université</span>
+                <span class="hashtag">#Master</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

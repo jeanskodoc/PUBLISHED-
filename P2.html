@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDS-🏫 - L'Environnement Digital Scolaire de Demain</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4a6bdf;
+            --secondary: #6c63ff;
+            --accent: #36d1dc;
+            --dark: #2c3e50;
+            --light: #f9f9f9;
+            --success: #1dd1a1;
+            --warning: #ff9f43;
+            --danger: #ff6b6b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%234a6bdf" opacity="0.05" width="100" height="100"/></svg>');
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .features {
+            padding: 4rem 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .demo-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            text-align: center;
+        }
+        
+        .accounts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .account-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        
+        .account-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .account-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+        
+        .credential-item {
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            background-color: #f5f7fa;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        
+        .admin-access {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 2rem auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        
+        .project-link {
+            display: block;
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .hashtags {
+            margin-top: 1rem;
+        }
+        
+        .hashtag {
+            display: inline-block;
+            margin: 0 5px;
+            color: var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            
+            .accounts {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">EDS-🏫</div>
+            <div class="tagline">L'Environnement Digital Scolaire de Demain</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>🚀 Découvrez l'École de Demain, Aujourd'hui !</h1>
+            <p>Votre établissement scolaire mérite une gestion moderne, sécurisée et intuitive. Notre plateforme EDS-🏫 révolutionne la gestion des collèges et lycées en centralisant tous les services.</p>
+            <a href="https://jeanskodoc.github.io/SECURITY-EDS/" class="cta-button">Visiter l'école pilote</a>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">✨ Les atouts d'EDS-🏫</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Sécurité renforcée</h3>
+                    <p>Protégez les données de votre communauté scolaire avec notre système de sécurité avancé.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Communication simplifiée</h3>
+                    <p>Un canal unique et sécurisé pour tous les acteurs de l'établissement.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3>Gestion centralisée</h3>
+                    <p>Administrez l'établissement efficacement sur une seule plateforme intuitive.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Accessibilité</h3>
+                    <p>Disponible partout, sur tous les appareils, à tout moment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="demo-section">
+        <div class="container">
+            <h2 class="section-title">👉 VISITEZ NOTRE MODÈLE D'ÉCOLE PILOTE !</h2>
+            <p>Vivez l'expérience complète en quelques clics. Explorez les interfaces dédiées aux parents, enseignants et administrateurs.</p>
+            
+            <div class="accounts">
+                <div class="account-card">
+                    <div class="account-header">
+                        <div class="account-icon">👨‍👩‍👧‍👦</div>
+                        <h3>Compte Parent</h3>
+                    </div>
+                    <p>Suivez la scolarité, consultez les notes, communiquez avec l'équipe pédagogique</p>
+                    <div class="credential-item">
+                        <strong>Identifiant :</strong> PARENT
+                    </div>
+                    <div class="credential-item">
+                        <strong>Mot de passe :</strong> PARENT1@
+                    </div>
+                </div>
+                
+                <div class="account-card">
+                    <div class="account-header">
+                        <div class="account-icon">📚</div>
+                        <h3>Compte Enseignant</h3>
+                    </div>
+                    <p>Gérez les cahiers de texte, saisissez les notes, animez la vie de classe</p>
+                    <div class="credential-item">
+                        <strong>Identifiant :</strong> ENSEIGNANT
+                    </div>
+                    <div class="credential-item">
+                        <strong>Mot de passe :</strong> ENSEIGNANT1@
+                    </div>
+                </div>
+                
+                <div class="account-card">
+                    <div class="account-header">
+                        <div class="account-icon">🏢</div>
+                        <h3>Compte Administration</h3>
+                    </div>
+                    <p>Pilotez l'établissement avec des outils de gestion puissants et des tableaux de bord</p>
+                    <div class="credential-item">
+                        <strong>Identifiant :</strong> KOLA
+                    </div>
+                    <div class="credential-item">
+                        <strong>Mot de passe :</strong> KOLA1@
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-access">
+                <h3>🔒 Pour accéder aux autres pages cryptées :</h3>
+                <div class="credential-item">
+                    <strong>Identifiant :</strong> admin
+                </div>
+                <div class="credential-item">
+                    <strong>Mot de passe :</strong> admin123
+                </div>
+            </div>
+            
+            <a href="https://jeanskodoc.github.io/SECURITY-EDS/" class="cta-button">Accéder à la plateforme</a>
+            
+            <a href="https://online.fliphtml5.com/kzrhc/tyll/#p=1" class="project-link">
+                📖 Découvrez la vision complète du projet et toutes ses fonctionnalités
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 EDS-🏫 (Environnement Digital Scolaire). Tous droits réservés.</p>
+            <div class="hashtags">
+                <span class="hashtag">#InnovationPédagogique</span>
+                <span class="hashtag">#NumériqueÉducatif</span>
+                <span class="hashtag">#EdTech</span>
+                <span class="hashtag">#GestionScolaire</span>
+                <span class="hashtag">#Collège</span>
+                <span class="hashtag">#Lycée</span>
+                <span class="hashtag">#Parent</span>
+                <span class="hashtag">#Enseignant</span>
+                <span class="hashtag">#Education</span>
+                <span class="hashtag">#PlateformeSécurisée</span>
+                <span class="hashtag">#EDS</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

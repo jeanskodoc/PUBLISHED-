@@ -13,6 +13,7 @@
             --dark: #2c3e50;
             --light: #f9f9f9;
             --success: #1dd1a1;
+            --whatsapp: #25D366;
         }
         
         * {
@@ -180,6 +181,64 @@
             color: var(--accent);
         }
         
+        /* Bouton WhatsApp flottant */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--whatsapp);
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+        }
+        
+        .whatsapp-text {
+            display: none;
+            position: absolute;
+            right: 70px;
+            bottom: 15px;
+            background-color: white;
+            color: var(--dark);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            white-space: nowrap;
+        }
+        
+        .whatsapp-float:hover .whatsapp-text {
+            display: block;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -196,6 +255,14 @@
             
             .products-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
             }
         }
     </style>
@@ -269,7 +336,7 @@
     
     <footer>
         <div class="container">
-            <p>© 2023 Solutions Éducatives. Tous droits réservés.</p>
+            <p>© 2025 Solutions Éducatives. Tous droits réservés.</p>
             <div class="hashtags">
                 <span class="hashtag">#InnovationPédagogique</span>
                 <span class="hashtag">#Enseignement</span>
@@ -282,5 +349,11 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Bouton WhatsApp flottant -->
+    <a href="https://wa.me/22892871605?text=Bonjour!%20J'aimerais%20en%20savoir%20plus%20sur%20vos%20produits%20éducatifs." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Contactez-nous sur WhatsApp</span>
+    </a>
 </body>
 </html>

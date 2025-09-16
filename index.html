@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation des Produits Éducatifs</title>
+    <title>Solutions Éducatives Innovantes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -41,35 +41,56 @@
             color: white;
             padding: 2rem 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
         }
         
         .logo {
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 1rem;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .tagline {
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
+            position: relative;
+            font-weight: 300;
         }
         
         .hero {
             padding: 4rem 0;
             text-align: center;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%234a6bdf" opacity="0.1" width="100" height="100"/></svg>');
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%234a6bdf" opacity="0.1" width="100" height="100"/></svg>');
+            position: relative;
         }
         
         .hero h1 {
             font-size: 2.8rem;
             margin-bottom: 1.5rem;
             color: var(--primary);
+            position: relative;
+            animation: fadeIn 1s ease-out;
         }
         
         .hero p {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto 2rem;
+            color: #555;
         }
         
         .cta-button {
@@ -84,6 +105,23 @@
             transition: all 0.3s ease;
             margin: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .cta-button:hover::after {
+            left: 100%;
         }
         
         .cta-button:hover {
@@ -109,6 +147,20 @@
             text-align: center;
             margin-bottom: 3rem;
             color: var(--primary);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
         }
         
         .products-grid {
@@ -123,14 +175,32 @@
             padding: 2rem;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transition: 0.5s;
+        }
+        
+        .product-card:hover::before {
+            height: 100%;
         }
         
         .product-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
         .product-card.jeanskodoc {
@@ -141,6 +211,8 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             color: var(--primary);
+            position: relative;
+            z-index: 1;
         }
         
         .product-icon.jeanskodoc {
@@ -151,6 +223,8 @@
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--primary);
+            position: relative;
+            z-index: 1;
         }
         
         .product-title.jeanskodoc {
@@ -160,11 +234,15 @@
         .product-description {
             margin-bottom: 1.5rem;
             flex-grow: 1;
+            position: relative;
+            z-index: 1;
         }
         
         .product-features {
             text-align: left;
             margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
         }
         
         .product-features li {
@@ -179,10 +257,31 @@
             color: var(--success);
             position: absolute;
             left: 0;
+            font-weight: bold;
         }
         
         .product-link {
             margin-top: auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial {
+            font-style: italic;
+            color: #666;
+            border-left: 3px solid var(--accent);
+            padding-left: 15px;
+            margin: 15px 0;
+            text-align: left;
+        }
+        
+        .product-highlight {
+            background: linear-gradient(120deg, rgba(254, 202, 87, 0.2), transparent);
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+            color: var(--dark);
         }
         
         footer {
@@ -200,6 +299,12 @@
             display: inline-block;
             margin: 0 5px;
             color: var(--accent);
+            transition: all 0.3s ease;
+        }
+        
+        .hashtag:hover {
+            color: white;
+            transform: translateY(-2px);
         }
         
         /* Bouton WhatsApp flottant */
@@ -260,6 +365,17 @@
             }
         }
         
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -292,31 +408,33 @@
     <header>
         <div class="container">
             <div class="logo">SOLUTIONS ÉDUCATIVES</div>
-            <div class="tagline">Des outils innovants pour transformer l'éducation</div>
+            <div class="tagline">Des outils innovants pour transformer l'apprentissage</div>
         </div>
     </header>
     
     <section class="hero">
         <div class="container">
-            <h1>Découvrez nos solutions éducatives innovantes</h1>
-            <p>Quatre produits complémentaires pour révolutionner l'enseignement, la gestion scolaire et l'apprentissage.</p>
+            <h1>Révolutionnez l'éducation avec nos solutions digitales</h1>
+            <p>Découvrez quatre produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et rendre l'apprentissage plus captivant que jamais.</p>
         </div>
     </section>
     
     <section class="products">
         <div class="container">
-            <h2 class="section-title">Nos Produits</h2>
+            <h2 class="section-title">Nos Solutions Innovantes</h2>
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-icon"><i class="fas fa-chalkboard-teacher"></i></div>
                     <h3 class="product-title">VISIO-EDUC</h3>
-                    <p class="product-description">Révolutionnez vos cours avec des expériences projetées et attrayantes qui captivent l'attention des élèves.</p>
+                    <p class="product-description">Donnez vie à vos cours avec une plateforme de projection interactive qui transforme l'enseignement traditionnel en expériences éducatives captivantes.</p>
+                    <div class="product-highlight">✨ Rendez chaque leçon mémorable avec un contenu visuel immersif</div>
                     <ul class="product-features">
-                        <li>Contenu interactif et engageant</li>
-                        <li>Multi-plateforme (PC, tablettes, Android)</li>
-                        <li>Abordable (500 FCFA pour 7 jours)</li>
-                        <li>Réduit la somnolence en classe</li>
+                        <li>Contenu interactif qui stimule l'engagement des élèves</li>
+                        <li>Multi-plateforme (PC, tablettes, Android) pour une accessibilité maximale</li>
+                        <li>Abordable à seulement 500 FCFA pour 7 jours d'accès complet</li>
+                        <li>Réduit significativement la somnolence en classe</li>
                     </ul>
+                    <div class="testimonial">"Depuis que j'utilise VISIO-EDUC, mes élèves sont plus attentifs et participent activement aux cours!" - Prof. Adjo, Sciences Physiques</div>
                     <div class="product-link">
                         <a href="P1.html" class="cta-button">Découvrir VISIO-EDUC</a>
                     </div>
@@ -325,13 +443,15 @@
                 <div class="product-card">
                     <div class="product-icon"><i class="fas fa-school"></i></div>
                     <h3 class="product-title">EDS-🏫</h3>
-                    <p class="product-description">L'Environnement Digital Scolaire de Demain pour une gestion moderne et sécurisée de votre établissement.</p>
+                    <p class="product-description">L'Environnement Digital Scolaire qui modernise la gestion de votre établissement avec une plateforme sécurisée, intuitive et complète.</p>
+                    <div class="product-highlight">🚀 Passez à l'ère du numérique avec une gestion scolaire 100% digitalisée</div>
                     <ul class="product-features">
-                        <li>Sécurité renforcée des données</li>
-                        <li>Communication simplifiée</li>
-                        <li>Gestion centralisée intuitive</li>
-                        <li>Accessible sur tous appareils</li>
+                        <li>Sécurité renforcée des données sensibles de l'établissement</li>
+                        <li>Communication simplifiée entre administration, enseignants et parents</li>
+                        <li>Gestion centralisée intuitive pour un gain de temps quotidien</li>
+                        <li>Accessible sur tous appareils, où que vous soyez</li>
                     </ul>
+                    <div class="testimonial">"EDS a transformé notre façon de travailler. Plus de paperasse, tout est digitalisé et accessible en un clic!" - Directeur Agbéko</div>
                     <div class="product-link">
                         <a href="P2.html" class="cta-button">Découvrir EDS-🏫</a>
                     </div>
@@ -340,13 +460,15 @@
                 <div class="product-card">
                     <div class="product-icon"><i class="fas fa-graduation-cap"></i></div>
                     <h3 class="product-title">CorrigéPlus</h3>
-                    <p class="product-description">Services de corrigés types complets et bien expliqués pour tous les niveaux académiques.</p>
+                    <p class="product-description">La référence en matière de corrigés types détaillés et pédagogiques, conçus par des experts pour assurer la réussite académique.</p>
+                    <div class="product-highlight">🎯 La clé pour comprendre parfaitement chaque concept et exceller aux examens</div>
                     <ul class="product-features">
-                        <li>Corrigés vérifiés par des experts</li>
-                        <li>Explications claires et détaillées</li>
-                        <li>Rédaction de documents professionnels</li>
-                        <li>Gain de temps considérable</li>
+                        <li>Corrigés vérifiés et enrichis par des enseignants experts</li>
+                        <li>Explications claires et détaillées pour une compréhension approfondie</li>
+                        <li>Rédaction de documents professionnels et méthodologiques</li>
+                        <li>Gain de temps considérable dans les révisions et préparations</li>
                     </ul>
+                    <div class="testimonial">"Avec CorrigéPlus, j'ai enfin compris mes erreurs et j'ai augmenté ma moyenne de 3 points!" - Koffi, élève en Terminale C</div>
                     <div class="product-link">
                         <a href="P3.html" class="cta-button">Découvrir CorrigéPlus</a>
                     </div>
@@ -355,13 +477,15 @@
                 <div class="product-card jeanskodoc">
                     <div class="product-icon jeanskodoc"><i class="fas fa-laptop-code"></i></div>
                     <h3 class="product-title jeanskodoc">JEANSKODOC-EPT</h3>
-                    <p class="product-description">Plateforme de répétitions en ligne interactive pour améliorer vos compétences académiques tout en vous amusant.</p>
+                    <p class="product-description">La plateforme de répétitions en ligne qui rend l'apprentissage interactif, amusant et extrêmement efficace grâce à des professeurs qualifiés.</p>
+                    <div class="product-highlight">⭐ Apprenez avec passion et obtenez des résultats exceptionnels</div>
                     <ul class="product-features">
-                        <li>Renforcement scolaire de haut niveau</li>
-                        <li>Professeurs qualifiés et interactifs</li>
-                        <li>Suivi de progrès personnalisé</li>
-                        <li>Apprentissage ludique et motivant</li>
+                        <li>Renforcement scolaire de haut niveau dans toutes les matières</li>
+                        <li>Professeurs qualifiés, passionnés et interactifs</li>
+                        <li>Suivi de progrès personnalisé pour maximiser votre potentiel</li>
+                        <li>Approche ludique qui transforme l'apprentissage en plaisir</li>
                     </ul>
+                    <div class="testimonial">"JEANSKODOC a sauvé mon année! Les cours sont tellement captivants qu'on oublie qu'on est en train d'étudier." - Aïcha, élève de 1ère</div>
                     <div class="product-link">
                         <a href="https://jeanskodoc.github.io/EPT/" class="cta-button jeanskodoc">Découvrir JEANSKODOC</a>
                     </div>

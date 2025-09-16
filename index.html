@@ -14,6 +14,7 @@
             --light: #f9f9f9;
             --success: #1dd1a1;
             --whatsapp: #25D366;
+            --jeanskodoc: #e74c3c;
         }
         
         * {
@@ -91,6 +92,14 @@
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
         
+        .cta-button.jeanskodoc {
+            background-color: var(--jeanskodoc);
+        }
+        
+        .cta-button.jeanskodoc:hover {
+            background-color: #c0392b;
+        }
+        
         .products {
             padding: 4rem 0;
             background-color: white;
@@ -124,16 +133,28 @@
             transform: translateY(-5px);
         }
         
+        .product-card.jeanskodoc {
+            border-top: 5px solid var(--jeanskodoc);
+        }
+        
         .product-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
             color: var(--primary);
         }
         
+        .product-icon.jeanskodoc {
+            color: var(--jeanskodoc);
+        }
+        
         .product-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--primary);
+        }
+        
+        .product-title.jeanskodoc {
+            color: var(--jeanskodoc);
         }
         
         .product-description {
@@ -278,7 +299,7 @@
     <section class="hero">
         <div class="container">
             <h1>Découvrez nos solutions éducatives innovantes</h1>
-            <p>Trois produits complémentaires pour révolutionner l'enseignement, la gestion scolaire et l'apprentissage.</p>
+            <p>Quatre produits complémentaires pour révolutionner l'enseignement, la gestion scolaire et l'apprentissage.</p>
         </div>
     </section>
     
@@ -330,6 +351,21 @@
                         <a href="P3.html" class="cta-button">Découvrir CorrigéPlus</a>
                     </div>
                 </div>
+                
+                <div class="product-card jeanskodoc">
+                    <div class="product-icon jeanskodoc"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="product-title jeanskodoc">JEANSKODOC-EPT</h3>
+                    <p class="product-description">Plateforme de répétitions en ligne interactive pour améliorer vos compétences académiques tout en vous amusant.</p>
+                    <ul class="product-features">
+                        <li>Renforcement scolaire de haut niveau</li>
+                        <li>Professeurs qualifiés et interactifs</li>
+                        <li>Suivi de progrès personnalisé</li>
+                        <li>Apprentissage ludique et motivant</li>
+                    </ul>
+                    <div class="product-link">
+                        <a href="P4.html" class="cta-button jeanskodoc">Découvrir JEANSKODOC</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -346,6 +382,7 @@
                 <span class="hashtag">#Numérique</span>
                 <span class="hashtag">#CoursEnLigne</span>
                 <span class="hashtag">#Corrigés</span>
+                <span class="hashtag">#RépétitionsEnLigne</span>
             </div>
         </div>
     </footer>

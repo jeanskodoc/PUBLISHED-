@@ -15,6 +15,9 @@
             --success: #1dd1a1;
             --whatsapp: #25D366;
             --jeanskodoc: #e74c3c;
+            --tontine: #9b59b6;
+            --boutique: #2ecc71;
+            --ecommerce: #3498db;
         }
         
         * {
@@ -138,6 +141,30 @@
             background-color: #c0392b;
         }
         
+        .cta-button.tontine {
+            background-color: var(--tontine);
+        }
+        
+        .cta-button.tontine:hover {
+            background-color: #8e44ad;
+        }
+        
+        .cta-button.boutique {
+            background-color: var(--boutique);
+        }
+        
+        .cta-button.boutique:hover {
+            background-color: #27ae60;
+        }
+        
+        .cta-button.ecommerce {
+            background-color: var(--ecommerce);
+        }
+        
+        .cta-button.ecommerce:hover {
+            background-color: #2980b9;
+        }
+        
         .products {
             padding: 4rem 0;
             background-color: white;
@@ -207,6 +234,18 @@
             border-top: 5px solid var(--jeanskodoc);
         }
         
+        .product-card.tontine {
+            border-top: 5px solid var(--tontine);
+        }
+        
+        .product-card.boutique {
+            border-top: 5px solid var(--boutique);
+        }
+        
+        .product-card.ecommerce {
+            border-top: 5px solid var(--ecommerce);
+        }
+        
         .product-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -219,6 +258,18 @@
             color: var(--jeanskodoc);
         }
         
+        .product-icon.tontine {
+            color: var(--tontine);
+        }
+        
+        .product-icon.boutique {
+            color: var(--boutique);
+        }
+        
+        .product-icon.ecommerce {
+            color: var(--ecommerce);
+        }
+        
         .product-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -229,6 +280,18 @@
         
         .product-title.jeanskodoc {
             color: var(--jeanskodoc);
+        }
+        
+        .product-title.tontine {
+            color: var(--tontine);
+        }
+        
+        .product-title.boutique {
+            color: var(--boutique);
+        }
+        
+        .product-title.ecommerce {
+            color: var(--ecommerce);
         }
         
         .product-description {
@@ -407,15 +470,15 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">SOLUTIONS ÉDUCATIVES</div>
-            <div class="tagline">Des outils innovants pour transformer l'apprentissage</div>
+            <div class="logo">SOLUTIONS ÉDUCATIVES & DIGITALES</div>
+            <div class="tagline">Des outils innovants pour transformer l'apprentissage et la gestion d'entreprise</div>
         </div>
     </header>
     
     <section class="hero">
         <div class="container">
-            <h1>Révolutionnez l'éducation avec nos solutions digitales</h1>
-            <p>Découvrez quatre produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et rendre l'apprentissage plus captivant que jamais.</p>
+            <h1>Révolutionnez l'éducation et la gestion d'entreprise avec nos solutions digitales</h1>
+            <p>Découvrez sept produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, et rendre l'apprentissage plus captivant que jamais.</p>
         </div>
     </section>
     
@@ -490,13 +553,64 @@
                         <a href="https://jeanskodoc.github.io/EPT/" class="cta-button jeanskodoc">Découvrir JEANSKODOC</a>
                     </div>
                 </div>
+                
+                <div class="product-card tontine">
+                    <div class="product-icon tontine"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3 class="product-title tontine">TONTINE DIGITALE</h3>
+                    <p class="product-description">Une plateforme moderne pour gérer vos tontines en toute sécurité et transparence, avec un suivi en temps réel des contributions et bénéfices.</p>
+                    <div class="product-highlight">💰 Simplifiez et sécurisez vos activités de tontine avec la technologie</div>
+                    <ul class="product-features">
+                        <li>Gestion transparente des cotisations et bénéfices</li>
+                        <li>Notifications automatiques pour les échéances</li>
+                        <li>Historique complet des transactions</li>
+                        <li>Interface intuitive accessible à tous les membres</li>
+                    </ul>
+                    <div class="testimonial">"Cette application a révolutionné notre tontine familiale. Plus de disputes, tout est clair et transparent!" - Martine, membre d'une tontine</div>
+                    <div class="product-link">
+                        <a href="https://jeanskodoc.github.io/TONTINE/" class="cta-button tontine">Découvrir TONTINE</a>
+                    </div>
+                </div>
+                
+                <div class="product-card boutique">
+                    <div class="product-icon boutique"><i class="fas fa-store"></i></div>
+                    <h3 class="product-title boutique">GESTION DE BOUTIQUE</h3>
+                    <p class="product-description">Une solution complète pour gérer efficacement votre boutique, du suivi des stocks à la gestion des ventes et des bénéfices.</p>
+                    <div class="product-highlight">🛒 Optimisez votre gestion commerciale avec des outils performants</div>
+                    <ul class="product-features">
+                        <li>Gestion des stocks en temps réel avec alertes de réapprovisionnement</li>
+                        <li>Suivi détaillé des ventes et des bénéfices</li>
+                        <li>Gestion des fournisseurs et des commandes</li>
+                        <li>Rapports analytiques pour une prise de décision éclairée</li>
+                    </ul>
+                    <div class="testimonial">"Depuis que j'utilise ce système, j'ai une vision claire de mon activité et j'ai augmenté mon chiffre d'affaires de 30%!" - Jean, gérant de boutique</div>
+                    <div class="product-link">
+                        <a href="https://jeanskodoc.github.io/E-Commerce-/" class="cta-button boutique">Découvrir GESTION BOUTIQUE</a>
+                    </div>
+                </div>
+                
+                <div class="product-card ecommerce">
+                    <div class="product-icon ecommerce"><i class="fas fa-shopping-cart"></i></div>
+                    <h3 class="product-title ecommerce">GESTION DE VENTE EN LIGNE</h3>
+                    <p class="product-description">Une plateforme e-commerce complète pour vendre vos produits en ligne avec gestion intégrée des commandes, paiements et livraisons.</p>
+                    <div class="product-highlight">🌐 Démarrez ou développez votre activité de vente en ligne facilement</div>
+                    <ul class="product-features">
+                        <li>Création de boutique en ligne personnalisable</li>
+                        <li>Gestion des commandes et des stocks automatisée</li>
+                        <li>Intégration de multiples moyens de paiement</li>
+                        <li>Suivi des livraisons et service client intégré</li>
+                    </ul>
+                    <div class="testimonial">"Avec cette plateforme, j'ai pu lancer mon commerce en ligne en quelques jours seulement. Les ventes ont décollé!" - Sarah, entrepreneure</div>
+                    <div class="product-link">
+                        <a href="https://jeanskodoc.github.io/Ma-boutique-en-ligne-/" class="cta-button ecommerce">Découvrir E-COMMERCE</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
     <footer>
         <div class="container">
-            <p>© 2025 Solutions Éducatives. Tous droits réservés.</p>
+            <p>© 2025 Solutions Éducatives & Digitales. Tous droits réservés.</p>
             <div class="hashtags">
                 <span class="hashtag">#InnovationPédagogique</span>
                 <span class="hashtag">#Enseignement</span>
@@ -507,12 +621,15 @@
                 <span class="hashtag">#CoursEnLigne</span>
                 <span class="hashtag">#Corrigés</span>
                 <span class="hashtag">#RépétitionsEnLigne</span>
+                <span class="hashtag">#TontineDigitale</span>
+                <span class="hashtag">#GestionBoutique</span>
+                <span class="hashtag">#Ecommerce</span>
             </div>
         </div>
     </footer>
     
     <!-- Bouton WhatsApp flottant -->
-    <a href="https://wa.me/22892871605?text=Bonjour!%20J'aimerais%20en%20savoir%20plus%20sur%20vos%20produits%20éducatifs." class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/22892871605?text=Bonjour!%20J'aimerais%20en%20savoir%20plus%20sur%20vos%20produits%20éducatifs%20et%20digitaux." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-text">Contactez-nous sur WhatsApp</span>
     </a>

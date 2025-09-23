@@ -18,6 +18,7 @@
             --tontine: #9b59b6;
             --boutique: #2ecc71;
             --ecommerce: #3498db;
+            --transport: #f39c12;
         }
         
         * {
@@ -165,6 +166,14 @@
             background-color: #2980b9;
         }
         
+        .cta-button.transport {
+            background-color: var(--transport);
+        }
+        
+        .cta-button.transport:hover {
+            background-color: #e67e22;
+        }
+        
         .products {
             padding: 4rem 0;
             background-color: white;
@@ -246,6 +255,10 @@
             border-top: 5px solid var(--ecommerce);
         }
         
+        .product-card.transport {
+            border-top: 5px solid var(--transport);
+        }
+        
         .product-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -270,6 +283,10 @@
             color: var(--ecommerce);
         }
         
+        .product-icon.transport {
+            color: var(--transport);
+        }
+        
         .product-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -292,6 +309,10 @@
         
         .product-title.ecommerce {
             color: var(--ecommerce);
+        }
+        
+        .product-title.transport {
+            color: var(--transport);
         }
         
         .product-description {
@@ -478,7 +499,7 @@
     <section class="hero">
         <div class="container">
             <h1>Révolutionnez l'éducation et la gestion d'entreprise avec nos solutions digitales</h1>
-            <p>Découvrez sept produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, et rendre l'apprentissage plus captivant que jamais.</p>
+            <p>Découvrez huit produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, et rendre l'apprentissage plus captivant que jamais.</p>
         </div>
     </section>
     
@@ -604,6 +625,23 @@
                         <a href="https://jeanskodoc.github.io/Ma-boutique-en-ligne-/" class="cta-button ecommerce">Découvrir E-COMMERCE</a>
                     </div>
                 </div>
+                
+                <div class="product-card transport">
+                    <div class="product-icon transport"><i class="fas fa-bus"></i></div>
+                    <h3 class="product-title transport">TRANSTOGO</h3>
+                    <p class="product-description">Une plateforme innovante pour simplifier vos déplacements au Togo avec des informations en temps réel sur les transports publics et privés.</p>
+                    <div class="product-highlight">🚌 Voyagez en toute sérénité avec des informations fiables sur les transports</div>
+                    <ul class="product-features">
+                        <li>Informations en temps réel sur les horaires et itinéraires</li>
+                        <li>Comparaison des options de transport disponibles</li>
+                        <li>Interface intuitive adaptée aux besoins locaux</li>
+                        <li>Solution économique pour optimiser vos déplacements</li>
+                    </ul>
+                    <div class="testimonial">"TRANSTOGO m'a permis de gagner un temps précieux dans mes déplacements quotidiens. Une vraie révolution!" - Komi, utilisateur régulier</div>
+                    <div class="product-link">
+                        <a href="https://jeanskodoc.github.io/transport-Togo-/" class="cta-button transport">Découvrir TRANSTOGO</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -624,6 +662,7 @@
                 <span class="hashtag">#TontineDigitale</span>
                 <span class="hashtag">#GestionBoutique</span>
                 <span class="hashtag">#Ecommerce</span>
+                <span class="hashtag">#TransportTogo</span>
             </div>
         </div>
     </footer>

@@ -19,6 +19,7 @@
             --boutique: #2ecc71;
             --ecommerce: #3498db;
             --transport: #f39c12;
+            --factures: #16a085;
         }
         
         * {
@@ -174,6 +175,14 @@
             background-color: #e67e22;
         }
         
+        .cta-button.factures {
+            background-color: var(--factures);
+        }
+        
+        .cta-button.factures:hover {
+            background-color: #138a72;
+        }
+        
         .products {
             padding: 4rem 0;
             background-color: white;
@@ -259,6 +268,10 @@
             border-top: 5px solid var(--transport);
         }
         
+        .product-card.factures {
+            border-top: 5px solid var(--factures);
+        }
+        
         .product-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -287,6 +300,10 @@
             color: var(--transport);
         }
         
+        .product-icon.factures {
+            color: var(--factures);
+        }
+        
         .product-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -313,6 +330,10 @@
         
         .product-title.transport {
             color: var(--transport);
+        }
+        
+        .product-title.factures {
+            color: var(--factures);
         }
         
         .product-description {
@@ -499,7 +520,7 @@
     <section class="hero">
         <div class="container">
             <h1>Révolutionnez l'éducation et la gestion d'entreprise avec nos solutions digitales</h1>
-            <p>Découvrez huit produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, et rendre l'apprentissage plus captivant que jamais.</p>
+            <p>Découvrez neuf produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, et rendre l'apprentissage plus captivant que jamais.</p>
         </div>
     </section>
     
@@ -642,6 +663,25 @@
                         <a href="https://jeanskodoc.github.io/transport-Togo-/" class="cta-button transport">Découvrir TRANSTOGO</a>
                     </div>
                 </div>
+                
+                <!-- Nouvelle carte pour le projet de facture digitalisé -->
+                <div class="product-card factures">
+                    <div class="product-icon factures"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3 class="product-title factures">FACTURES DIGITALISÉES & ANALYSE DES VENTES</h3>
+                    <p class="product-description">Une solution complète pour digitaliser vos factures et analyser vos performances commerciales avec des rapports détaillés et des insights actionnables.</p>
+                    <div class="product-highlight">📊 Transformez vos données de vente en décisions stratégiques éclairées</div>
+                    <ul class="product-features">
+                        <li>Création et gestion de factures numériques professionnelles</li>
+                        <li>Analyse approfondie des tendances de vente et de la performance</li>
+                        <li>Rapports personnalisables avec visualisations graphiques intuitives</li>
+                        <li>Suivi en temps réel du chiffre d'affaires et des indicateurs clés</li>
+                        <li>Export des données pour une intégration avec d'autres systèmes</li>
+                    </ul>
+                    <div class="testimonial">"Cette solution a révolutionné notre comptabilité. Plus de paperasse, des analyses précises et un gain de temps considérable!" - Marc, responsable financier</div>
+                    <div class="product-link">
+                        <a href="https://jeanskodoc.github.io/Factures-digitalis-es/" class="cta-button factures">Découvrir FACTURES DIGITALISÉES</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -663,6 +703,8 @@
                 <span class="hashtag">#GestionBoutique</span>
                 <span class="hashtag">#Ecommerce</span>
                 <span class="hashtag">#TransportTogo</span>
+                <span class="hashtag">#FacturesDigitales</span>
+                <span class="hashtag">#AnalyseVentes</span>
             </div>
         </div>
     </footer>

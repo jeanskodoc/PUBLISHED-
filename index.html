@@ -20,6 +20,7 @@
             --ecommerce: #3498db;
             --transport: #f39c12;
             --factures: #16a085;
+            --carte-virtuelle: #8e44ad;
         }
         
         * {
@@ -183,6 +184,14 @@
             background-color: #138a72;
         }
         
+        .cta-button.carte-virtuelle {
+            background-color: var(--carte-virtuelle);
+        }
+        
+        .cta-button.carte-virtuelle:hover {
+            background-color: #7d3c98;
+        }
+        
         .products {
             padding: 4rem 0;
             background-color: white;
@@ -272,6 +281,10 @@
             border-top: 5px solid var(--factures);
         }
         
+        .product-card.carte-virtuelle {
+            border-top: 5px solid var(--carte-virtuelle);
+        }
+        
         .product-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -304,6 +317,10 @@
             color: var(--factures);
         }
         
+        .product-icon.carte-virtuelle {
+            color: var(--carte-virtuelle);
+        }
+        
         .product-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -334,6 +351,10 @@
         
         .product-title.factures {
             color: var(--factures);
+        }
+        
+        .product-title.carte-virtuelle {
+            color: var(--carte-virtuelle);
         }
         
         .product-description {
@@ -520,7 +541,7 @@
     <section class="hero">
         <div class="container">
             <h1>Révolutionnez l'éducation et la gestion d'entreprise avec nos solutions digitales</h1>
-            <p>Découvrez neuf produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, et rendre l'apprentissage plus captivant que jamais.</p>
+            <p>Découvrez dix produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, et rendre l'apprentissage plus captivant que jamais.</p>
         </div>
     </section>
     
@@ -682,6 +703,25 @@
                         <a href="https://jeanskodoc.github.io/Factures-digitalis-es/" class="cta-button factures">Découvrir FACTURES DIGITALISÉES</a>
                     </div>
                 </div>
+                
+                <!-- Nouvelle carte pour le projet Carte virtuelle -->
+                <div class="product-card carte-virtuelle">
+                    <div class="product-icon carte-virtuelle"><i class="fas fa-id-card"></i></div>
+                    <h3 class="product-title carte-virtuelle">CARTE VIRTUELLE</h3>
+                    <p class="product-description">Créez et partagez facilement des cartes de visite virtuelles personnalisées pour promouvoir votre entreprise ou vos services de manière professionnelle et moderne.</p>
+                    <div class="product-highlight">💼 Présentez-vous professionnellement avec une carte de visite digitale interactive</div>
+                    <ul class="product-features">
+                        <li>Design personnalisable selon votre image de marque</li>
+                        <li>Partage instantané via QR code, lien ou messagerie</li>
+                        <li>Mise à jour en temps réel de vos informations</li>
+                        <li>Intégration de vos réseaux sociaux et coordonnées</li>
+                        <li>Écologique et économique (plus besoin d'imprimer)</li>
+                    </ul>
+                    <div class="testimonial">"La carte virtuelle m'a permis de moderniser mon réseau professionnel. Je partage mes coordonnées en un clic!" - David, consultant indépendant</div>
+                    <div class="product-link">
+                        <a href="https://jeanskodoc.github.io/Carte-virtuelle-/" class="cta-button carte-virtuelle">Découvrir CARTE VIRTUELLE</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -704,6 +744,7 @@
                 <span class="hashtag">#Ecommerce</span>
                 <span class="hashtag">#TransportTogo</span>
                 <span class="hashtag">#FacturesDigitales</span>
+                <span class="hashtag">#CarteVirtuelle</span>
                 <span class="hashtag">#AnalyseVentes</span>
             </div>
         </div>

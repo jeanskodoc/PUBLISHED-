@@ -21,6 +21,7 @@
             --transport: #f39c12;
             --factures: #16a085;
             --carte-virtuelle: #8e44ad;
+            --location: #1abc9c;
         }
         
         * {
@@ -192,6 +193,14 @@
             background-color: #7d3c98;
         }
         
+        .cta-button.location {
+            background-color: var(--location);
+        }
+        
+        .cta-button.location:hover {
+            background-color: #16a085;
+        }
+        
         .products {
             padding: 4rem 0;
             background-color: white;
@@ -285,6 +294,10 @@
             border-top: 5px solid var(--carte-virtuelle);
         }
         
+        .product-card.location {
+            border-top: 5px solid var(--location);
+        }
+        
         .product-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -321,6 +334,10 @@
             color: var(--carte-virtuelle);
         }
         
+        .product-icon.location {
+            color: var(--location);
+        }
+        
         .product-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -355,6 +372,10 @@
         
         .product-title.carte-virtuelle {
             color: var(--carte-virtuelle);
+        }
+        
+        .product-title.location {
+            color: var(--location);
         }
         
         .product-description {
@@ -541,7 +562,7 @@
     <section class="hero">
         <div class="container">
             <h1>Révolutionnez l'éducation et la gestion d'entreprise avec nos solutions digitales</h1>
-            <p>Découvrez dix produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, et rendre l'apprentissage plus captivant que jamais.</p>
+            <p>Découvrez onze produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, et rendre l'apprentissage plus captivant que jamais.</p>
         </div>
     </section>
     
@@ -722,6 +743,25 @@
                         <a href="https://jeanskodoc.github.io/Carte-virtuelle-/" class="cta-button carte-virtuelle">Découvrir CARTE VIRTUELLE</a>
                     </div>
                 </div>
+                
+                <!-- Nouvelle carte pour le projet de gestion de location -->
+                <div class="product-card location">
+                    <div class="product-icon location"><i class="fas fa-home"></i></div>
+                    <h3 class="product-title location">GESTION DE LOCATION</h3>
+                    <p class="product-description">Une plateforme complète pour gérer efficacement vos biens immobiliers en location, du suivi des locataires à la gestion des loyers et des contrats.</p>
+                    <div class="product-highlight">🏠 Simplifiez la gestion locative avec des outils professionnels et intuitifs</div>
+                    <ul class="product-features">
+                        <li>Gestion centralisée des biens immobiliers et des locataires</li>
+                        <li>Suivi automatisé des paiements de loyers et des échéances</li>
+                        <li>Génération de contrats de location personnalisables</li>
+                        <li>Alertes pour les impayés et les renouvellements de contrat</li>
+                        <li>Tableaux de bord pour un suivi financier en temps réel</li>
+                    </ul>
+                    <div class="testimonial">"Cette application a transformé ma gestion locative. Plus de paperasse, tout est organisé et je gagne un temps précieux chaque mois!" - Léa, propriétaire de plusieurs appartements</div>
+                    <div class="product-link">
+                        <a href="https://jeanskodoc.github.io/RE-U-DE-LOYER/" class="cta-button location">Découvrir GESTION DE LOCATION</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -746,6 +786,7 @@
                 <span class="hashtag">#FacturesDigitales</span>
                 <span class="hashtag">#CarteVirtuelle</span>
                 <span class="hashtag">#AnalyseVentes</span>
+                <span class="hashtag">#GestionLocation</span>
             </div>
         </div>
     </footer>

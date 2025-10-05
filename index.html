@@ -22,6 +22,7 @@
             --factures: #16a085;
             --carte-virtuelle: #8e44ad;
             --location: #1abc9c;
+            --emploi-du-temps: #e84393;
         }
         
         * {
@@ -201,6 +202,14 @@
             background-color: #16a085;
         }
         
+        .cta-button.emploi-du-temps {
+            background-color: var(--emploi-du-temps);
+        }
+        
+        .cta-button.emploi-du-temps:hover {
+            background-color: #d63031;
+        }
+        
         .products {
             padding: 4rem 0;
             background-color: white;
@@ -298,6 +307,10 @@
             border-top: 5px solid var(--location);
         }
         
+        .product-card.emploi-du-temps {
+            border-top: 5px solid var(--emploi-du-temps);
+        }
+        
         .product-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -338,6 +351,10 @@
             color: var(--location);
         }
         
+        .product-icon.emploi-du-temps {
+            color: var(--emploi-du-temps);
+        }
+        
         .product-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -376,6 +393,10 @@
         
         .product-title.location {
             color: var(--location);
+        }
+        
+        .product-title.emploi-du-temps {
+            color: var(--emploi-du-temps);
         }
         
         .product-description {
@@ -562,7 +583,7 @@
     <section class="hero">
         <div class="container">
             <h1>Révolutionnez l'éducation et la gestion d'entreprise avec nos solutions digitales</h1>
-            <p>Découvrez onze produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, et rendre l'apprentissage plus captivant que jamais.</p>
+            <p>Découvrez douze produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, et rendre l'apprentissage plus captivant que jamais.</p>
         </div>
     </section>
     
@@ -706,7 +727,6 @@
                     </div>
                 </div>
                 
-                <!-- Nouvelle carte pour le projet de facture digitalisé -->
                 <div class="product-card factures">
                     <div class="product-icon factures"><i class="fas fa-file-invoice-dollar"></i></div>
                     <h3 class="product-title factures">FACTURES DIGITALISÉES & ANALYSE DES VENTES</h3>
@@ -725,7 +745,6 @@
                     </div>
                 </div>
                 
-                <!-- Nouvelle carte pour le projet Carte virtuelle -->
                 <div class="product-card carte-virtuelle">
                     <div class="product-icon carte-virtuelle"><i class="fas fa-id-card"></i></div>
                     <h3 class="product-title carte-virtuelle">CARTE VIRTUELLE</h3>
@@ -744,7 +763,6 @@
                     </div>
                 </div>
                 
-                <!-- Nouvelle carte pour le projet de gestion de location -->
                 <div class="product-card location">
                     <div class="product-icon location"><i class="fas fa-home"></i></div>
                     <h3 class="product-title location">GESTION DE LOCATION</h3>
@@ -760,6 +778,25 @@
                     <div class="testimonial">"Cette application a transformé ma gestion locative. Plus de paperasse, tout est organisé et je gagne un temps précieux chaque mois!" - Léa, propriétaire de plusieurs appartements</div>
                     <div class="product-link">
                         <a href="https://jeanskodoc.github.io/RE-U-DE-LOYER/" class="cta-button location">Découvrir GESTION DE LOCATION</a>
+                    </div>
+                </div>
+                
+                <!-- Nouvelle carte pour le projet Emploi du temps -->
+                <div class="product-card emploi-du-temps">
+                    <div class="product-icon emploi-du-temps"><i class="fas fa-calendar-alt"></i></div>
+                    <h3 class="product-title emploi-du-temps">EMPLOI DU TEMPS</h3>
+                    <p class="product-description">Une application intuitive pour créer, gérer et partager facilement vos emplois du temps personnels, scolaires ou professionnels avec une interface moderne et conviviale.</p>
+                    <div class="product-highlight">📅 Organisez votre temps efficacement avec un outil de planification visuel et flexible</div>
+                    <ul class="product-features">
+                        <li>Création rapide d'emplois du temps personnalisés</li>
+                        <li>Interface intuitive et adaptée à tous les utilisateurs</li>
+                        <li>Partage facile avec collègues, camarades ou famille</li>
+                        <li>Visualisation claire des horaires et activités</li>
+                        <li>Accessible sur tous appareils, en ligne et hors ligne</li>
+                    </ul>
+                    <div class="testimonial">"Cet outil a révolutionné mon organisation! Je gagne un temps précieux chaque semaine dans la planification de mes cours et activités." - Prof. Mensah, enseignant</div>
+                    <div class="product-link">
+                        <a href="https://jeanskodoc.github.io/Emploi-du-temps-/" class="cta-button emploi-du-temps">Découvrir EMPLOI DU TEMPS</a>
                     </div>
                 </div>
             </div>
@@ -787,6 +824,7 @@
                 <span class="hashtag">#CarteVirtuelle</span>
                 <span class="hashtag">#AnalyseVentes</span>
                 <span class="hashtag">#GestionLocation</span>
+                <span class="hashtag">#EmploiDuTemps</span>
             </div>
         </div>
     </footer>

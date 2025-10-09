@@ -23,6 +23,7 @@
             --carte-virtuelle: #8e44ad;
             --location: #1abc9c;
             --emploi-du-temps: #e84393;
+            --ceet-tde: #1a5276;
         }
         
         * {
@@ -210,6 +211,14 @@
             background-color: #d63031;
         }
         
+        .cta-button.ceet-tde {
+            background-color: var(--ceet-tde);
+        }
+        
+        .cta-button.ceet-tde:hover {
+            background-color: #154360;
+        }
+        
         .products {
             padding: 4rem 0;
             background-color: white;
@@ -311,6 +320,10 @@
             border-top: 5px solid var(--emploi-du-temps);
         }
         
+        .product-card.ceet-tde {
+            border-top: 5px solid var(--ceet-tde);
+        }
+        
         .product-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -355,6 +368,10 @@
             color: var(--emploi-du-temps);
         }
         
+        .product-icon.ceet-tde {
+            color: var(--ceet-tde);
+        }
+        
         .product-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -397,6 +414,10 @@
         
         .product-title.emploi-du-temps {
             color: var(--emploi-du-temps);
+        }
+        
+        .product-title.ceet-tde {
+            color: var(--ceet-tde);
         }
         
         .product-description {
@@ -799,6 +820,25 @@
                         <a href="https://jeanskodoc.github.io/Emploi-du-temps-/" class="cta-button emploi-du-temps">Découvrir EMPLOI DU TEMPS</a>
                     </div>
                 </div>
+                
+                <!-- Nouvelle carte pour le projet CEET/TDE -->
+                <div class="product-card ceet-tde">
+                    <div class="product-icon ceet-tde"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3 class="product-title ceet-tde">SUIVI DES AGENTS CEET/TDE</h3>
+                    <p class="product-description">Une plateforme innovante pour optimiser la gestion des interventions techniques, le suivi des consommations et la coordination des équipes sur le terrain.</p>
+                    <div class="product-highlight">📍 Géolocalisez vos agents et optimisez vos interventions sur le terrain</div>
+                    <ul class="product-features">
+                        <li>Suivi en temps réel des agents sur le terrain</li>
+                        <li>Géolocalisation précise des compteurs et équipements</li>
+                        <li>Visualisation des mouvements et interventions des agents</li>
+                        <li>Déclaration d'interventions avec photos et rapports</li>
+                        <li>Tableaux de bord pour un suivi opérationnel complet</li>
+                    </ul>
+                    <div class="testimonial">"Cette plateforme a révolutionné notre gestion des interventions. Nous avons réduit nos temps d'intervention de 40% et amélioré notre service client!" - Responsable opérationnel</div>
+                    <div class="product-link">
+                        <a href="https://jeanskodoc.github.io/CEET-TDE/" class="cta-button ceet-tde">Visiter CEET/TDE</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -825,6 +865,10 @@
                 <span class="hashtag">#AnalyseVentes</span>
                 <span class="hashtag">#GestionLocation</span>
                 <span class="hashtag">#EmploiDuTemps</span>
+                <span class="hashtag">#CEET</span>
+                <span class="hashtag">#TDE</span>
+                <span class="hashtag">#Géolocalisation</span>
+                <span class="hashtag">#SuiviAgents</span>
             </div>
         </div>
     </footer>

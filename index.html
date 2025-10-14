@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solutions Éducatives Innovantes</title>
+    <title>Solutions Éducatives et Digitales Innovantes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -24,6 +24,7 @@
             --location: #1abc9c;
             --emploi-du-temps: #e84393;
             --ceet-tde: #1a5276;
+            --economie: #9c27b0;
         }
         
         * {
@@ -219,6 +220,14 @@
             background-color: #154360;
         }
         
+        .cta-button.economie {
+            background-color: var(--economie);
+        }
+        
+        .cta-button.economie:hover {
+            background-color: #7b1fa2;
+        }
+        
         .products {
             padding: 4rem 0;
             background-color: white;
@@ -324,6 +333,10 @@
             border-top: 5px solid var(--ceet-tde);
         }
         
+        .product-card.economie {
+            border-top: 5px solid var(--economie);
+        }
+        
         .product-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -372,6 +385,10 @@
             color: var(--ceet-tde);
         }
         
+        .product-icon.economie {
+            color: var(--economie);
+        }
+        
         .product-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -418,6 +435,10 @@
         
         .product-title.ceet-tde {
             color: var(--ceet-tde);
+        }
+        
+        .product-title.economie {
+            color: var(--economie);
         }
         
         .product-description {
@@ -471,6 +492,41 @@
             margin: 10px 0;
             font-weight: bold;
             color: var(--dark);
+        }
+        
+        .economie-banner {
+            background: linear-gradient(135deg, var(--economie), #6a1b9a);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .economie-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+        
+        .economie-banner h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .economie-banner p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            position: relative;
         }
         
         footer {
@@ -590,6 +646,14 @@
                 bottom: 20px;
                 right: 20px;
             }
+            
+            .economie-banner h2 {
+                font-size: 1.5rem;
+            }
+            
+            .economie-banner p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -604,13 +668,21 @@
     <section class="hero">
         <div class="container">
             <h1>Révolutionnez l'éducation et la gestion d'entreprise avec nos solutions digitales</h1>
-            <p>Découvrez douze produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, et rendre l'apprentissage plus captivant que jamais.</p>
+            <p>Découvrez treize produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, optimiser vos finances et rendre l'apprentissage plus captivant que jamais.</p>
         </div>
     </section>
     
     <section class="products">
         <div class="container">
             <h2 class="section-title">Nos Solutions Innovantes</h2>
+            
+            <!-- Bannière spéciale pour le nouveau projet ÉCONOMIE -->
+            <div class="economie-banner">
+                <h2>NOUVEAU : GESTIONNAIRE DE DÉPENSES</h2>
+                <p>Prenez le contrôle de vos finances avec notre tout nouveau gestionnaire de dépenses. Suivez, analysez et optimisez vos finances personnelles ou professionnelles facilement.</p>
+                <a href="https://jeanskodoc.github.io/-CONOMIE-/" class="cta-button economie">Découvrir ÉCONOMIE</a>
+            </div>
+            
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-icon"><i class="fas fa-chalkboard-teacher"></i></div>
@@ -802,7 +874,6 @@
                     </div>
                 </div>
                 
-                <!-- Nouvelle carte pour le projet Emploi du temps -->
                 <div class="product-card emploi-du-temps">
                     <div class="product-icon emploi-du-temps"><i class="fas fa-calendar-alt"></i></div>
                     <h3 class="product-title emploi-du-temps">EMPLOI DU TEMPS</h3>
@@ -821,7 +892,6 @@
                     </div>
                 </div>
                 
-                <!-- Nouvelle carte pour le projet CEET/TDE -->
                 <div class="product-card ceet-tde">
                     <div class="product-icon ceet-tde"><i class="fas fa-map-marked-alt"></i></div>
                     <h3 class="product-title ceet-tde">SUIVI DES AGENTS CEET/TDE</h3>
@@ -837,6 +907,26 @@
                     <div class="testimonial">"Cette plateforme a révolutionné notre gestion des interventions. Nous avons réduit nos temps d'intervention de 40% et amélioré notre service client!" - Responsable opérationnel</div>
                     <div class="product-link">
                         <a href="https://jeanskodoc.github.io/CEET-TDE/" class="cta-button ceet-tde">Visiter CEET/TDE</a>
+                    </div>
+                </div>
+                
+                <!-- Nouvelle carte pour le projet ÉCONOMIE -->
+                <div class="product-card economie">
+                    <div class="product-icon economie"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="product-title economie">ÉCONOMIE - GESTIONNAIRE DE DÉPENSES</h3>
+                    <p class="product-description">Prenez le contrôle total de vos finances avec notre gestionnaire de dépenses intelligent. Suivez vos revenus, catégorisez vos dépenses et visualisez votre situation financière en temps réel.</p>
+                    <div class="product-highlight">💸 Maîtrisez votre budget et atteignez vos objectifs financiers plus facilement</div>
+                    <ul class="product-features">
+                        <li>Suivi détaillé de toutes vos dépenses et revenus</li>
+                        <li>Catégorisation automatique des transactions</li>
+                        <li>Visualisations graphiques pour une compréhension rapide</li>
+                        <li>Alertes de budget pour éviter les dépassements</li>
+                        <li>Prévisions financières basées sur vos habitudes</li>
+                        <li>Export de rapports pour un suivi à long terme</li>
+                    </ul>
+                    <div class="testimonial">"Ce gestionnaire a complètement changé ma relation avec l'argent. Je sais enfin où va mon argent et j'ai réussi à économiser 20% de plus chaque mois!" - Kevin, utilisateur</div>
+                    <div class="product-link">
+                        <a href="https://jeanskodoc.github.io/-CONOMIE-/" class="cta-button economie">Découvrir ÉCONOMIE</a>
                     </div>
                 </div>
             </div>
@@ -869,6 +959,10 @@
                 <span class="hashtag">#TDE</span>
                 <span class="hashtag">#Géolocalisation</span>
                 <span class="hashtag">#SuiviAgents</span>
+                <span class="hashtag">#GestionFinances</span>
+                <span class="hashtag">#Économie</span>
+                <span class="hashtag">#Budget</span>
+                <span class="hashtag">#Dépenses</span>
             </div>
         </div>
     </footer>

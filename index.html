@@ -25,6 +25,7 @@
             --emploi-du-temps: #e84393;
             --ceet-tde: #1a5276;
             --economie: #9c27b0;
+            --pedagogique: #4361ee;
         }
         
         * {
@@ -228,6 +229,14 @@
             background-color: #7b1fa2;
         }
         
+        .cta-button.pedagogique {
+            background-color: var(--pedagogique);
+        }
+        
+        .cta-button.pedagogique:hover {
+            background-color: #3a0ca3;
+        }
+        
         .products {
             padding: 4rem 0;
             background-color: white;
@@ -337,6 +346,10 @@
             border-top: 5px solid var(--economie);
         }
         
+        .product-card.pedagogique {
+            border-top: 5px solid var(--pedagogique);
+        }
+        
         .product-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -389,6 +402,10 @@
             color: var(--economie);
         }
         
+        .product-icon.pedagogique {
+            color: var(--pedagogique);
+        }
+        
         .product-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -439,6 +456,10 @@
         
         .product-title.economie {
             color: var(--economie);
+        }
+        
+        .product-title.pedagogique {
+            color: var(--pedagogique);
         }
         
         .product-description {
@@ -668,7 +689,7 @@
     <section class="hero">
         <div class="container">
             <h1>Révolutionnez l'éducation et la gestion d'entreprise avec nos solutions digitales</h1>
-            <p>Découvrez treize produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, optimiser vos finances et rendre l'apprentissage plus captivant que jamais.</p>
+            <p>Découvrez quatorze produits complémentaires conçus pour moderniser l'enseignement, simplifier la gestion scolaire et d'entreprise, optimiser vos finances et rendre l'apprentissage plus captivant que jamais.</p>
         </div>
     </section>
     
@@ -910,7 +931,6 @@
                     </div>
                 </div>
                 
-                <!-- Nouvelle carte pour le projet ÉCONOMIE -->
                 <div class="product-card economie">
                     <div class="product-icon economie"><i class="fas fa-chart-line"></i></div>
                     <h3 class="product-title economie">ÉCONOMIE - GESTIONNAIRE DE DÉPENSES</h3>
@@ -927,6 +947,26 @@
                     <div class="testimonial">"Ce gestionnaire a complètement changé ma relation avec l'argent. Je sais enfin où va mon argent et j'ai réussi à économiser 20% de plus chaque mois!" - Kevin, utilisateur</div>
                     <div class="product-link">
                         <a href="https://jeanskodoc.github.io/-CONOMIE-/" class="cta-button economie">Découvrir ÉCONOMIE</a>
+                    </div>
+                </div>
+
+                <!-- NOUVEAU : Application Pédagogique Complète -->
+                <div class="product-card pedagogique">
+                    <div class="product-icon pedagogique"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3 class="product-title pedagogique">APPLICATION PÉDAGOGIQUE COMPLÈTE</h3>
+                    <p class="product-description">Une suite d'outils conçus pour faciliter le travail des enseignants avec un système d'authentification sécurisé et des applications spécialisées pour la création de contenu pédagogique.</p>
+                    <div class="product-highlight">📚 Optimisez votre travail d'enseignant avec des outils spécialisés et une interface intuitive</div>
+                    <ul class="product-features">
+                        <li>Système d'authentification sécurisé pour protéger vos données</li>
+                        <li>Créateur de fiches de leçons structurées et complètes</li>
+                        <li>Générateur de fiches d'évaluation avec différents types de questions</li>
+                        <li>Interface responsive adaptée à tous les appareils</li>
+                        <li>Export en PDF pour un partage facile avec les élèves</li>
+                        <li>Design moderne avec support du mode sombre automatique</li>
+                    </ul>
+                    <div class="testimonial">"Cette application a transformé ma préparation de cours. Je gagne un temps considérable et mes fiches sont bien plus professionnelles!" - Prof. Koffi, Mathématiques</div>
+                    <div class="product-link">
+                        <a href="https://jeanskodoc.github.io/ENSEIGNANT-MODEL/" class="cta-button pedagogique">Découvrir l'Application Pédagogique</a>
                     </div>
                 </div>
             </div>
@@ -963,6 +1003,9 @@
                 <span class="hashtag">#Économie</span>
                 <span class="hashtag">#Budget</span>
                 <span class="hashtag">#Dépenses</span>
+                <span class="hashtag">#ApplicationPédagogique</span>
+                <span class="hashtag">#FichesDeLeçons</span>
+                <span class="hashtag">#Évaluations</span>
             </div>
         </div>
     </footer>
